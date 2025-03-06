@@ -41,8 +41,25 @@
   
   /* CSS Reset above */
 
+  * {
+    font-family:'Courier New', Courier, monospace
+  }
+
   body {
     background-color: rgb(231, 231, 231);
+  }
+
+  div > div {
+    padding-top: 10px;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    line-height: 30px;
   }
 
   .container {
@@ -58,10 +75,15 @@
     grid-column: 2 / 3;
   }
 
+
   .sidebar {
     color:white;
     background-color: rgb(61, 166, 236);
     grid-row: 1 / -1;
+
+    display: grid;
+    grid-template-rows: 50px 1fr 1fr;
+    justify-content: center;
   }
 
 
