@@ -41,16 +41,23 @@
   
   /* CSS Reset above */
 
-  * {
-    font-family:'Courier New', Courier, monospace
+  :root {
+    font-family:'Courier New', Courier, monospace;
+    --accent-color: rgb(61, 166, 236);
+    --main-color: rgb(231, 231, 231);
+    --white: white;
+
   }
 
   body {
-    background-color: rgb(231, 231, 231);
+    background-color: var(--main-color);
   }
 
-  div > div {
-    padding-top: 10px;
+  .header,
+  .sidebar,
+  .main-content,
+  .nav-actions {
+    padding-top: 15px;
   }
 
   ul {
@@ -69,16 +76,74 @@
     grid-template-rows: 100px 1fr;
   }
 
+/*-------------HEADER----------------*/
+
   .header {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px 3px;
     grid-column: 2 / 3;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
+  .nav-top {
+    display: grid;
+    grid-template-columns: 25px 1fr 50px 50px 100px;
+    grid-template-rows: 25px;
+  }
+
+  .user-name-top-right {
+    font-size: 0.8rem;
+  }
+
+  /*--------------HEADER BOTTOM-------*/
+  .nav-actions {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .user-greeting {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr 3fr;
+  }
+
+  .profile-pic-lg {
+    grid-row: 1 / -1;
+  }
+
+  .hello   {
+    font-size: 0.7rem;
+  }
+
+  .nav-actions-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    align-items:flex-start;
+    font-size: 0.75rem;
+  }
+
+  .nav-actions-buttons button {
+    border-radius: 35px;
+    background-color: var(--accent-color);
+    color: white;
+    border-color: transparent;
+    align-content: center;
+  }
+
+  input[type="search"] {
+    border-radius: 30px;
+    background-color: var(--main-color);
+    border-color: transparent;
+    width: 80%;
+  }
+
+/*-------SIDE BAR------------------*/
 
   .sidebar {
     color:white;
-    background-color: rgb(61, 166, 236);
+    background-color: var(--accent-color);
     grid-row: 1 / -1;
 
     display: grid;
