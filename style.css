@@ -65,6 +65,10 @@
     padding-top: 15px;
   }
 
+  h4 {
+    padding-bottom: 5px;
+  }
+
   ul {
     padding: 0;
   }
@@ -100,6 +104,10 @@
   .user-name-top-right {
     font-size: 0.8rem;
     font-weight: bold;
+  }
+
+  img.user-profile-pic-top-right {
+    width: 1.5rem;
   }
 
   /*--------------HEADER BOTTOM-------*/
@@ -226,3 +234,37 @@ hr {
 }
 
 /*----------TRENDING--------------------*/
+
+.trending-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px 25px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    box-shadow: var(--shadow);
+    min-width: 230px;
+}
+
+.trending-user {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 10px;
+}
+
+.trending-user-profile-pic {
+    grid-row: span 2;
+}
+
+img.trending-user-profile-pic {
+    width: 30px;
+}
+
+.trending-username {
+    font-weight: bold;
+}
+
+.trending p {
+    font-size: .7rem;
+}
