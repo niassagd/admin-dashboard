@@ -41,3 +41,16 @@
   
   /* CSS Reset above */
 
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
+  }
+
+  .header {
+    grid-column: 2 / 3;
+  }
+
+  .sidebar {
+    grid-row: 1 / -1;
+  }
