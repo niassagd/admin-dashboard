@@ -41,14 +41,25 @@
   
   /* CSS Reset above */
 
+  @font-face {
+    font-family: "momcake";
+    src: 
+        url(fonts/MomcakeThin-9Y6aZ.woff2) format("woff2"),
+        url(fonts/MomcakeThin-WyonA.woff) format("woff");
+        font-weight: normal;
+        font-style: normal;
+    }
+
   :root {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'momcake', 'Courier New', Courier, monospace;
     --accent-color: rgb(18, 103, 160);
     --main-color: rgb(207, 221, 230);
     --white: white;
     --shadow: rgba(0, 0, 0, 0.336) 0px 2px 5px;
-
+    font-size: 20px;
   }
+
+ 
 
   body {
     background-color: var(--main-color);
@@ -97,21 +108,24 @@
 
   .nav-top {
     display: grid;
-    grid-template-columns: 25px 1fr 50px 50px 100px;
+    grid-template-columns: 25px 1fr 50px 50px 120px;
     grid-template-rows: 25px;
   }
 
   .notification-icon {
     width: 1.5rem;
+    justify-self: right;
   }
 
   .user-name-top-right {
     font-size: 0.8rem;
     font-weight: bold;
+    justify-self: right;
   }
 
   img.user-profile-pic-top-right {
     width: 1.5rem;
+    justify-self: right;
   }
 
   /*--------------HEADER BOTTOM-------*/
